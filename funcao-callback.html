@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <style>
+        h1{
+            margin-bottom: 0;
+            line-height: 12px;
+        }
+
+        p{
+            margin-top: 0;
+            padding-bottom: 0;
+        }
+    </style>
+    <script>
+
+        function exbirArtigo(id, callbackSucesso, calbackErro){
+            //logica: recupera id via requisição http
+            
+            if (true){
+                callbackSucesso("Funções de Callback em JS", "Funções de callback São muitos...")
+            }else{
+                calbackErro("Erro ao recuperar os dados")
+            }
+
+        }
+
+        var callbackSucesso = function(titulo, descricao) {
+            document.write("<h1>" + titulo + "</h1>")
+            document.write("<br>")
+            document.write("<p>" + descricao + "</p>")
+        }
+
+        var calbackErro = function(erro) {
+            document.write("<p><b>Erro:</b>" + erro + "</p>")
+        }
+
+        exbirArtigo(1, callbackSucesso, calbackErro)
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>
