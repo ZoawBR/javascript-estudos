@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Mata Mosquito</title>
+
+        <link rel="stylesheet" href="style.css">
+        <script src="jogo.js"></script>
+    </head>
+
+    <body onresize="ajusteTamanoTela()">
+        
+        <div class="painel">
+            <div class="vidas">
+                <img id = "v1" src="res/coracao_cheio.png">
+                <img id = "v2" src="res/coracao_cheio.png">
+                <img id = "v3" src="res/coracao_cheio.png">
+            </div>
+            <div class="cronometro">
+                Tempo Restante: <span id="tempo-dec"></span>
+            </div>
+        </div>
+
+        <script>
+            
+            document.getElementById("tempo-dec").innerHTML  = tempo;
+
+            var clearMosquito = setInterval(function(){
+                posRandom(); 
+            }, criaMopsquitoTempo)
+        </script>
+    </body>
+</html>

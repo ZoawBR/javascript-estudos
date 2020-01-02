@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel">
+      
+      //3 escopos: global, função e bloco
+
+      let serie = 'Friends'
+
+      {
+        let serie = 'The Walking Dead'
+        console.log('dentro do bloco: ' + serie)
+      }
+
+      console.log('fora do bloco: ' + serie)
+
+    </script>
+    
+  </head>
+  <body>
+    <div id="output"></div>
+  </body>
+</html>
